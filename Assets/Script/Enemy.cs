@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         move = new Vector3(0, -3, 0);
         transform.position += move * enemySpeed * Time.deltaTime;
 
-        if(transform.position.y < -4f)
+        if(transform.position.y < -10f)
         {
             Destroy(gameObject);
         }
