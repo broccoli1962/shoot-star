@@ -37,6 +37,27 @@ public class FlyMove : MonoBehaviour
         Vector3 direction = new Vector3(horizontal, vertical);
 
         transform.Translate(direction * speed * Time.deltaTime);
+
+        if (transform.position.x > 4.25f)
+        {
+            Vector3 limit = new Vector3(4.25f, transform.position.y, 0);
+            transform.position = limit;
+        }
+        if (transform.position.x < -4.25f)
+        {
+            Vector3 limit = new Vector3(-4.25f, transform.position.y, 0);
+            transform.position = limit;
+        }
+        if (transform.position.y < -5f)
+        {
+            Vector3 limit = new Vector3(transform.position.x, -5f, 0);
+            transform.position = limit;
+        }
+        if (transform.position.y > 4.5f)
+        {
+            Vector3 limit = new Vector3(transform.position.x, 4.5f, 0);
+            transform.position = limit;
+        }
     }
 
     //ÃÑ¾Ë »ý¼º

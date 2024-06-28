@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float bulletSpeed = 5.0f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Egg")
         {
             Destroy(collision.gameObject);
+            ScoreCheck.score += 100;
         }
     }
 }
