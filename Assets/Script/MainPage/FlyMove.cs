@@ -40,24 +40,24 @@ public class FlyMove : MonoBehaviour
 
         transform.Translate(direction * speed * Time.deltaTime);
 
-        if (transform.position.x > 4.25f)
+        if (transform.position.x > 28f)
         {
-            Vector3 limit = new Vector3(4.25f, transform.position.y, 0);
+            Vector3 limit = new Vector3(28f, transform.position.y, 0);
             transform.position = limit;
         }
-        if (transform.position.x < -4.25f)
+        if (transform.position.x < -28f)
         {
-            Vector3 limit = new Vector3(-4.25f, transform.position.y, 0);
+            Vector3 limit = new Vector3(-28f, transform.position.y, 0);
             transform.position = limit;
         }
-        if (transform.position.y < -5f)
+        if (transform.position.y < -34f)
         {
-            Vector3 limit = new Vector3(transform.position.x, -5f, 0);
+            Vector3 limit = new Vector3(transform.position.x, -34f, 0);
             transform.position = limit;
         }
-        if (transform.position.y > 4.5f)
+        if (transform.position.y > 29.5f)
         {
-            Vector3 limit = new Vector3(transform.position.x, 4.5f, 0);
+            Vector3 limit = new Vector3(transform.position.x, 29.5f, 0);
             transform.position = limit;
         }
     }

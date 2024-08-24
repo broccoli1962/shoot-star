@@ -10,8 +10,8 @@ public class RankSystem : MonoBehaviour
     public string PlayerName;
     public float score;
 
-    public string url = "localhost:3000/ranking";
-    public string url2 = "localhost:3000/data";
+    public string url = "https://port-0-node-lycoe7dz7739380b.sel5.cloudtype.app/ranking";
+    public string url2 = "https://port-0-node-lycoe7dz7739380b.sel5.cloudtype.app/data";
 
     private void Awake()
     {

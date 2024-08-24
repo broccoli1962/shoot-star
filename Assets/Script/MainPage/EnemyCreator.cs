@@ -27,7 +27,7 @@ public class EnemyCreator : MonoBehaviour
     {
         GameObject egg = Instantiate(enemy) as GameObject;
         egg.transform.parent = enemySet.transform;
-        egg.transform.position = new Vector3(Random.Range(-3f, 3f), transform.position.y, 0);
+        egg.transform.position = new Vector3(Random.Range(-10f, 10f), transform.position.y, 0);
         egg.GetComponent<Enemy>().enemySpeed = Random.Range(2, 4);
     }
 }

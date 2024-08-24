@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonControl : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class ButtonControl : MonoBehaviour
     public void UploadBtn()
     {
         StartCoroutine(calc.GetComponent<RankSystem>().SendRankingData());
-        
+        gameObject.GetComponent<Button>().interactable = false;
     }
 
 

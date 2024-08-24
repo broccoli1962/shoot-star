@@ -14,10 +14,10 @@ public class Enemy : MonoBehaviour
     public void EnemyMove()
     {
         Vector3 move = Vector3.zero;
-        move = new Vector3(0, -3, 0);
+        move = new Vector3(0, -10, 0);
         transform.position += move * enemySpeed * Time.deltaTime;
 
-        if(transform.position.y < -10f)
+        if(transform.position.y < -50f)
         {
             Destroy(gameObject);
         }

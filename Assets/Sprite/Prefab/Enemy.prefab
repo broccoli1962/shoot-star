@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3231245246254874210}
   - component: {fileID: 8136024559235729625}
   - component: {fileID: 8735425157901149396}
-  - component: {fileID: 3181453316691456685}
+  - component: {fileID: 1999902996857858934}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Egg
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 0
---- !u!60 &3181453316691456685
+--- !u!60 &1999902996857858934
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +135,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.12, y: 0.15}
+    oldSize: {x: 0.75, y: 0.9375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -143,16 +143,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.009713374, y: 0.15256763}
-      - {x: -0.021875083, y: 0.14025009}
-      - {x: -0.035215206, y: 0.12674248}
-      - {x: -0.040023897, y: 0.12041102}
-      - {x: -0.062003303, y: 0.07890709}
-      - {x: -0.06270329, y: 0.04054937}
-      - {x: -0.020317553, y: 0.0005337051}
-      - {x: 0.02147809, y: 0}
-      - {x: 0.060109064, y: 0.040922817}
-      - {x: 0.06, y: 0.08282974}
-      - {x: 0.036820866, y: 0.12557222}
-      - {x: 0.011441151, y: 0.15256661}
+    - - {x: -0.06341137, y: 0.9406022}
+      - {x: -0.37810224, y: 0.50848293}
+      - {x: -0.38120443, y: 0.2528305}
+      - {x: -0.12502865, y: 0.0032135407}
+      - {x: -0.120191425, y: -0.01908807}
+      - {x: 0.0027793641, y: -0.027862359}
+      - {x: 0.12992492, y: -0.01861329}
+      - {x: 0.37936354, y: 0.2485226}
+      - {x: 0.3765511, y: 0.50337386}
+      - {x: 0.06386712, y: 0.9406022}
   m_UseDelaunayMesh: 0
