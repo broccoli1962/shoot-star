@@ -18,8 +18,8 @@ public class ScoreCheck : MonoBehaviour
     {
         if(!SystemManager.state)
         {
-            SetText();
             score += 100 * Time.deltaTime;
+            SetText();
         }
     }
     public void SetText()

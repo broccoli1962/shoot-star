@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class ButtonControl : MonoBehaviour
 {
     public GameObject calc;
+    public TextMeshProUGUI uploadText;
 
     public void StartBtn()
     {
@@ -22,8 +24,17 @@ public class ButtonControl : MonoBehaviour
 
     public void UploadBtn()
     {
-        StartCoroutine(calc.GetComponent<RankSystem>().SendRankingData());
-        gameObject.GetComponent<Button>().interactable = false;
+        TextMeshProUGUI text = uploadText.GetComponent<TextMeshProUGUI>();
+        Debug.Log(text.text.Length);
+        if(text.text.Length > 1)
+        {
+            StartCoroutine(calc.GetComponent<RankSystem>().SendRankingData());
+            gameObject.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            Debug.Log("한글자 이상 입력 필요");
+        }
     }
 
 

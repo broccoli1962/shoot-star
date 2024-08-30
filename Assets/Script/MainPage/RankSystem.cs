@@ -7,8 +7,6 @@ using Newtonsoft.Json;
 public class RankSystem : MonoBehaviour
 {
     public RankList hi;
-    public string PlayerName;
-    public float score;
 
     public string url = "https://port-0-node-lycoe7dz7739380b.sel5.cloudtype.app/ranking";
     public string url2 = "https://port-0-node-lycoe7dz7739380b.sel5.cloudtype.app/data";
@@ -20,8 +18,8 @@ public class RankSystem : MonoBehaviour
 
     public IEnumerator SendRankingData()
     {
-        PlayerName = InputName.playerNameInput.text;
-        score = ScoreCheck.score;
+        string PlayerName = InputName.playerNameInput.text;
+        float score = ScoreCheck.score;
 
         List<IMultipartFormSection> form = new List<IMultipartFormSection> ();
         form.Add(new MultipartFormDataSection("playerName", PlayerName));
