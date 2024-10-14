@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource hitSound;
+    public AudioSource audioTrack;
     public AudioClip explode;
+    public AudioClip shoot;
     // Start is called before the first frame update
     void Start()
     {
-        hitSound = GetComponent<AudioSource>();
+        audioTrack = GetComponent<AudioSource>();
+    }
+    public void HitSound()
+    {
+        audioTrack.PlayOneShot(explode);
+    }
+    public void ShootSound()
+    {
+        audioTrack.PlayOneShot(shoot);
     }
 }

@@ -8,13 +8,10 @@ public class Player : FlyMove
     public bool dead;
     public float Mujuktime = 3;
     public SpriteRenderer render;
-    private AudioSource hitSound;
-    public AudioClip explode;
 
     private void Start()
     {
         render = GetComponent<SpriteRenderer>();
-        hitSound = GetComponent<AudioSource>();
     }
 
     public void mujuk() {
@@ -23,7 +20,7 @@ public class Player : FlyMove
 
         if(dead)
         {
-            hitSound.PlayOneShot(explode);
+            sound.HitSound();
             render.color = new Color(1, 1, 1, 0.3f);
             gameObject.layer = 6;
         }

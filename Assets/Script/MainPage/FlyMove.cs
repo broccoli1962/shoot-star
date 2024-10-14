@@ -5,7 +5,8 @@ using UnityEngine;
 public class FlyMove : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
-    
+    public SoundManager sound;
+
     public GameObject bullet;
     public float speed = 3.0f;
     public float CoolDown = 0.2f;
@@ -16,7 +17,6 @@ public class FlyMove : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
@@ -67,6 +67,7 @@ public class FlyMove : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && timeCheck >= CoolDown)
         {
+            sound.ShootSound();
             GameObject newBullet = Instantiate(bullet, transform.position + Vector3.forward * 5.0f, transform.rotation);
             timeCheck = 0.0f;
         }
