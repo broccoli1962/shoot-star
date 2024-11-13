@@ -24,7 +24,7 @@ public class ScoreCheck : MonoBehaviour
     }
     public void SetText()
     {
-        text.text = score.ToString();
-        GameEndTextScore.text = score.ToString();
+        text.text = score.ToString("F0");
+        GameEndTextScore.text = score.ToString("F0");
     }
 }

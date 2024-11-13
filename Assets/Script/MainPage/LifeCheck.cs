@@ -9,8 +9,6 @@ public class LifeCheck : MonoBehaviour
     public RawImage life1;
     public RawImage life2;
     public RawImage life3;
-    // Start is called before the first frame update
-
     private void FixedUpdate()
     {
         if(Life == 2)
@@ -21,7 +19,7 @@ public class LifeCheck : MonoBehaviour
         {
             life2.gameObject.SetActive(false);
         }
-        if(Life == 0)
+        if(Life <= 0)
         {
             life3.gameObject.SetActive(false);
             SystemManager.state = true;

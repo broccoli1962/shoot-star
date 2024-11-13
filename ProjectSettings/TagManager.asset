@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Lazer
   - Egg
+  - BossEgg
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

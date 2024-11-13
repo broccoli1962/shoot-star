@@ -37,7 +37,6 @@ public class FlyMove : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(horizontal, vertical);
-
         transform.Translate(direction * speed * Time.deltaTime);
 
         if (transform.position.x > 28f)

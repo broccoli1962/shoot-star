@@ -14,6 +14,14 @@ public class Player : FlyMove
         render = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        if(LifeCheck.Life <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void mujuk() {
 
         dead = !dead;
@@ -33,14 +41,15 @@ public class Player : FlyMove
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Egg"))
+        if (dead) {
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("Egg") || collision.gameObject.CompareTag("BossEgg") || collision.gameObject.CompareTag("EnemyBullet"))
         {
-            LifeCheck.Life--;
-
             mujuk();
-
+            LifeCheck.Life--;
             Invoke("mujuk", Mujuktime);
-
             Debug.Log(LifeCheck.Life);
         }
     }
